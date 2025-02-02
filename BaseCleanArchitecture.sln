@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{42D9AA4B-EC02-4E6F-B356-C33C094CED3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{693BC718-3A21-4852-BD9F-8A2A252E2554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.API", "src\BaseCleanArchitecture.API\BaseCleanArchitecture.API.csproj", "{B608E868-0D04-42D3-B78A-32ADADEDFBA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.AppHost", "src\BaseCleanArchitecture.AppHost\BaseCleanArchitecture.AppHost.csproj", "{9A4877E0-1D41-4429-A019-1900D134AF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.Application", "src\BaseCleanArchitecture.Application\BaseCleanArchitecture.Application.csproj", "{AFA1CCD3-F493-4653-B9B6-86CA839FAE34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.Domain", "src\BaseCleanArchitecture.Domain\BaseCleanArchitecture.Domain.csproj", "{6B1E0264-4780-44F5-848E-C94872284A5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.Infrastructure", "src\BaseCleanArchitecture.Infrastructure\BaseCleanArchitecture.Infrastructure.csproj", "{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCleanArchitecture.ServiceDefaults", "src\BaseCleanArchitecture.ServiceDefaults\BaseCleanArchitecture.ServiceDefaults.csproj", "{0ECDCA60-A027-4105-B9E3-631D669ADE89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B608E868-0D04-42D3-B78A-32ADADEDFBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B608E868-0D04-42D3-B78A-32ADADEDFBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B608E868-0D04-42D3-B78A-32ADADEDFBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B608E868-0D04-42D3-B78A-32ADADEDFBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4877E0-1D41-4429-A019-1900D134AF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4877E0-1D41-4429-A019-1900D134AF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4877E0-1D41-4429-A019-1900D134AF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4877E0-1D41-4429-A019-1900D134AF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA1CCD3-F493-4653-B9B6-86CA839FAE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA1CCD3-F493-4653-B9B6-86CA839FAE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA1CCD3-F493-4653-B9B6-86CA839FAE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA1CCD3-F493-4653-B9B6-86CA839FAE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1E0264-4780-44F5-848E-C94872284A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1E0264-4780-44F5-848E-C94872284A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1E0264-4780-44F5-848E-C94872284A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1E0264-4780-44F5-848E-C94872284A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECDCA60-A027-4105-B9E3-631D669ADE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECDCA60-A027-4105-B9E3-631D669ADE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECDCA60-A027-4105-B9E3-631D669ADE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECDCA60-A027-4105-B9E3-631D669ADE89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B608E868-0D04-42D3-B78A-32ADADEDFBA4} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+		{9A4877E0-1D41-4429-A019-1900D134AF2F} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+		{AFA1CCD3-F493-4653-B9B6-86CA839FAE34} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+		{6B1E0264-4780-44F5-848E-C94872284A5D} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+		{F33D8DE8-C3D1-4513-AFB7-E7B66B1A0065} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+		{0ECDCA60-A027-4105-B9E3-631D669ADE89} = {42D9AA4B-EC02-4E6F-B356-C33C094CED3D}
+	EndGlobalSection
+EndGlobal

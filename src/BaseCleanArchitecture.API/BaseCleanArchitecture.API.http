@@ -1,0 +1,6 @@
+@BaseCleanArchitecture.API_HostAddress = http://localhost:5075
+
+GET {{BaseCleanArchitecture.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
