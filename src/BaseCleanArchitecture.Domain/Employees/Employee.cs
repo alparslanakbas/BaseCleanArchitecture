@@ -16,7 +16,7 @@ namespace BaseCleanArchitecture.Domain.Employees
         public DateOnly BirthOfDate { get; set; }
         public decimal Salary { get; set; }
         public Adress? Adress { get; set; }
-        public PersonelInformation? PersonelInformation { get; set; }
+        public PersonelInformation PersonelInformation { get; set; } = default!;
 
         private string GenerateDefaultLastName()
         {
