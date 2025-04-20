@@ -9,9 +9,9 @@ namespace BaseCleanArchitecture.Domain.Abstractions
     public abstract class BaseEntityDto
     {
         public Guid Id { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime? UpdatedDate { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
+        public DateTimeOffset? UpdatedDate { get; set; }
         public bool IsDelete { get; set; }
-        public DateTime DeleteAt { get; set; }
+        public DateTimeOffset DeleteAt { get; set; }
     }
 }

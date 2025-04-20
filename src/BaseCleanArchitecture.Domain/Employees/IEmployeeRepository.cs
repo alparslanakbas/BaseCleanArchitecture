@@ -1,4 +1,4 @@
-﻿using GenericRepository;
+﻿using CD.GenericRepository;
 
 namespace BaseCleanArchitecture.Domain.Employees
 {
