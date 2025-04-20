@@ -1,6 +1,6 @@
 ﻿using BaseCleanArchitecture.Domain.Employees;
 using BaseCleanArchitecture.Infrastructure.Context;
-using GenericRepository;
+using CD.GenericRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;

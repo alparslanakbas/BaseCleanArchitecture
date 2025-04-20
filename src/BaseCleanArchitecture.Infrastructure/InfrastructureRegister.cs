@@ -1,4 +1,5 @@
 ﻿using BaseCleanArchitecture.Infrastructure.Context;
+using CD.GenericRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,9 +18,11 @@ namespace BaseCleanArchitecture.Infrastructure
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                string connectionString = configuration.GetConnectionString("DefaultConnection")!;
+                string connectionString = configuration.GetConnectionString("PostgreConnection")!;
                 options.UseNpgsql(connectionString);
             });
+
+            services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
 
             services.Scan(options =>
             {
