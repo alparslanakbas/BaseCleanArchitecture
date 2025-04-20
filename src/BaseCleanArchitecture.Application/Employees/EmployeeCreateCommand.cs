@@ -1,9 +1,10 @@
 ﻿using BaseCleanArchitecture.Domain.Employees;
+using CD.GenericRepository;
+using CD.Results;
 using FluentValidation;
-using GenericRepository;
 using Mapster;
 using MediatR;
-using TS.Result;
+using System.Net;
 
 namespace BaseCleanArchitecture.Application.Employees
 {
@@ -11,7 +12,6 @@ namespace BaseCleanArchitecture.Application.Employees
     (
         string FirstName,
         string LastName,
-        string FullName,
         DateOnly BirthOfDate,
         decimal Salary,
         PersonelInformation PersonelInformation,
@@ -26,7 +26,7 @@ namespace BaseCleanArchitecture.Application.Employees
             var isExist = await employeeRepository.AnyAsync(e => e.PersonelInformation.IdentityNumber == request.PersonelInformation.IdentityNumber, cancellationToken);
             if (isExist)
             {
-                return Result<string>.Failure("Bu Kimlik Numarası ile kayıtlı bir çalışan mevcut");
+                return Result<string>.Failure(HttpStatusCode.Conflict,$"Bu {request.PersonelInformation.IdentityNumber} Kimlik Numarası ile kayıtlı bir çalışan mevcut");
             }
 
             Employee employee = request.Adapt<Employee>();
@@ -34,7 +34,7 @@ namespace BaseCleanArchitecture.Application.Employees
             employeeRepository.Add(employee);
             await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return Result<string>.Succeed($"{employee.Id} Başarılı bir şekilde Eklendi");
+            return Result<string>.Success($"{employee.FullName} Başarılı bir şekilde Eklendi");
         }
     }
 
@@ -49,11 +49,6 @@ namespace BaseCleanArchitecture.Application.Employees
             RuleFor(x => x.LastName)
                 .NotEmpty().WithMessage("Soyad alanı boş geçilemez")
                 .MinimumLength(2).WithMessage("Soyad en az 2 karakter içermelidir.");
-
-            RuleFor(x => x.FullName)
-                .NotEmpty().WithMessage("Ad Soyad alanı boş geçilemez")
-                .MinimumLength(5).WithMessage("Ad Soyad en az 5 karakter içermelidir.")
-                .MaximumLength(50).WithMessage("Ad Soyad en fazla 50 karakter içermelidir.");
 
             RuleFor(x => x.PersonelInformation.IdentityNumber)
                 .NotEmpty().WithMessage("Kimlik Numarası alanı boş geçilemez")
